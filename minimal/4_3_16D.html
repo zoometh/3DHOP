@@ -31,8 +31,8 @@
  	<tbody>
 	   <tr>
 		<td style="vertical-align:top;">
-			<img id="hs1_img" src="img/chef.png" style="max-width:350px; max-height:500px;"/>
-			<figcaption style='font-size:80%;text-align:center;margin-top:5px;margin-left:5px;'>Lumey et al. 1990</figcaption>
+			<img id="hs1_img" src="img/hbzz.png" style="max-width:350px; max-height:500px;"/>
+			<figcaption style='font-size:80%;text-align:center;margin-top:5px;margin-left:5px;'>Huet 2012</figcaption>
 		</td>
 		<td style="vertical-align:top;">
 			<p class="scroll" style="max-height:500px; font-style:normal; text-align:justify; margin-top:-3px; padding:3px 3px 40px 3px;"><span class="hs_text"></span></p>
@@ -135,9 +135,9 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/7_1_8.nxz" 
+			"mesh_1" : { url: "models/4_3_16D.nxz" 
 		},
-			"Sphere": { url: "models/7_1_8_sphere.ply" 
+			"Sphere": { url: "models/4_3_16D_sphere.ply" 
 			}
 			},
 		modelInstances : {
@@ -149,9 +149,9 @@ function setup3dhop() {
 		trackball: {
 			type : TurntablePanTrackball,
 			trackOptions : {
-				startPhi: 30, //
+				startPhi: 0, //
 				startTheta: 30, // 30
-				startDistance: 1.5, //
+				startDistance: 1, //
 				minMaxPhi: [-180, 180],
 				minMaxTheta: [-180, 180], // [-30.0, 70.0],
 				minMaxDist: [0.5, 3.0]
