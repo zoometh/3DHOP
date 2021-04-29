@@ -49,8 +49,8 @@
   <img id="zoomout"     title="Zoom Out"               src="skins/dark/zoomout.png"/><br/>
 <!--ZOOM-->
 <!--HOTSPOT-->
-  <img id="hotspot_on" title="Hide Hotspots"         src="skins/dark/pin_on.png"  style="position:absolute; visibility:hidden;"/>
-  <img id="hotspot"    title="Show Hotspots"         src="skins/dark/pin.png" /><br/>
+  <img id="hotspot_on" title="Hide Hotspots"         src="skins/dark/pin_on.png" style="position:absolute"/>
+  <img id="hotspot"    title="Show Hotspots"         src="skins/dark/pin.png" style="visibility:hidden;"/><br/>
 <!--HOTSPOT-->
 <!--LIGHTING-->
   <img id="lighting_off" title="Enable Lighting"       src="skins/dark/lighting_off.png" style="position:absolute; visibility:hidden;"/>
@@ -179,10 +179,8 @@ function setup3dhop() {
 //--SECTIONS--
 
 //--SPOT VISIBILITY
-	presenter.setSpotVisibility(HOP_ALL, false, true);
-
+	presenter.setSpotVisibility(HOP_ALL, true, true);
 	presenter._onPickedSpot = onPickedSpt;
-    // presenter._onPickedInstance = onPickedInstance;
 }
 
 
@@ -219,8 +217,10 @@ function actionsToolbar(action) {
 //--SECTIONS--
 	else if(action=='sections' || action=='sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
 //--SECTIONS--
+//--HOTSPOT--
 	else if(action=='hotspot'|| action=='hotspot_on') {presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); 
     hotspotSwitch(); }
+//--HOTSPOT--
 }
 
 //--MEASURE--
@@ -249,7 +249,6 @@ function onPickedSpt(id) {
 
 $(document).ready(function(){
 	init3dhop();
-
 	setup3dhop();
 });
 </script>
