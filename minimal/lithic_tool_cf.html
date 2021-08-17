@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta content="charset=UTF-8"/>
-<title>3D Lasergram</title>
+<title>3D ConFocal</title>
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
 <link type="text/css" rel="stylesheet" href="https://3dhop.net/distribution/latest/stylesheet/3dhop_panels.css"/>
@@ -31,9 +31,10 @@
  	<tbody>
 	   <tr>
 		<td style="vertical-align:top;">
-			<img id="hs1_img" src="img/confoc_3d.jpg" style="max-width:350px; max-height:500px;"/>
- 			<figcaption style='font-size:80%;text-align:center;margin-top:5px;margin-left:5px;'><a href="https://zoometh.github.io/3DHOP/minimal/lithic_tool_cf.html" target="_blank"><p style="background-color:tomato;"> vers la 3D ConFocal</p></a></figcaption>
-		</td>
+			<!-- <img id="hs1_img" src="img/hbzz.png" style="max-width:350px; max-height:500px;"/> -->
+			<a href="https://localhost/3DHOP_4.3/minimal/lithic_tool_cf.html" target="_blank"><p style="background-color:tomato;">ConFocal model</p></a>
+<!-- 			<figcaption style='font-size:80%;text-align:center;margin-top:5px;margin-left:5px;'>KIU2611</figcaption>
+ -->		</td>
 		<td style="vertical-align:top;">
 			<p class="scroll" style="max-height:500px; font-style:normal; text-align:justify; margin-top:-3px; padding:3px 3px 40px 3px;"><span class="hs_text"></span></p>
 		</td>
@@ -49,8 +50,8 @@
   <img id="zoomout"     title="Zoom Out"               src="skins/dark/zoomout.png"/><br/>
 <!--ZOOM-->
 <!--HOTSPOT-->
-  <img id="hotspot_on" title="Hide Hotspots"         src="skins/dark/pin_on.png" style="position:absolute"/>
-  <img id="hotspot"    title="Show Hotspots"         src="skins/dark/pin.png" style="visibility:hidden;"/><br/>
+  <!-- <img id="hotspot_on" title="Hide Hotspots"         src="skins/dark/pin_on.png" style="position:absolute"/> -->
+  <!-- <img id="hotspot"    title="Show Hotspots"         src="skins/dark/pin.png" style="visibility:hidden;"/><br/> -->
 <!--HOTSPOT-->
 <!--LIGHTING-->
   <img id="lighting_off" title="Enable Lighting"       src="skins/dark/lighting_off.png" style="position:absolute; visibility:hidden;"/>
@@ -73,8 +74,8 @@
   <img id="sections"    title="Enable Plane Sections"  src="skins/dark/sections.png"/><br/>
 <!--SECTIONS-->
 <!--COLOR-->
-  <img id="color_on"    title="Disable Solid Color"    src="skins/dark/color_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="color"       title="Enable Solid Color"     src="skins/dark/color.png"/><br/>
+  <!-- <img id="color_on"    title="Disable Solid Color"    src="skins/dark/color_on.png" style="position:absolute; visibility:hidden;"/> -->
+  <!-- <img id="color"       title="Enable Solid Color"     src="skins/dark/color.png"/><br/> -->
 <!--COLOR-->
 <!--CAMERA-->
   <img id="perspective"  title="Perspective Camera"    src="skins/dark/perspective.png" style="position:absolute; visibility:hidden;"/>
@@ -135,10 +136,8 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/lithic_tool_model.nxz" 
-		},
-			"Sphere": { url: "models/lithic_tool_roi_cf.ply" 
-			}
+			"mesh_1" : { url: "models/lithic_tool_cf.nxz" 
+		}
 			},
 		modelInstances : {
 			"model_1" : { 
@@ -178,9 +177,9 @@ function setup3dhop() {
 	sectiontoolInit();
 //--SECTIONS--
 
-//--SPOT VISIBILITY
-	presenter.setSpotVisibility(HOP_ALL, true, true);
-	presenter._onPickedSpot = onPickedSpt;
+<!-- //--SPOT VISIBILITY -->
+	<!-- presenter.setSpotVisibility(HOP_ALL, true, true); -->
+	<!-- presenter._onPickedSpot = onPickedSpt; -->
 }
 
 
@@ -225,7 +224,8 @@ function actionsToolbar(action) {
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$('#measure-output').html(measure.toFixed(2) + " mm"); 
+	<!-- $('#measure-output').html(measure.toFixed(2) + "\00B5m");  -->
+	$('#measure-output').html(measure.toFixed(2) + " &#181;m"); 
 }
 //--MEASURE--
 
