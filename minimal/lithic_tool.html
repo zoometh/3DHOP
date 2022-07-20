@@ -5,7 +5,6 @@
 <title>3D Lasergram</title>
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
-<!-- <link type="text/css" rel="stylesheet" href="https://3dhop.net/distribution/latest/stylesheet/3dhop_panels.css"/> -->
 <link type="text/css" rel="stylesheet" href="stylesheet/3dhop_panels.css"/>
 <!--SPIDERGL-->
 <script type="text/javascript" src="js/spidergl.js"></script>
@@ -218,7 +217,7 @@ function actionsToolbar(action) {
 //--SCREENSHOT--
 //--SECTIONS--
 	else if(action=='sections' || action=='sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
-//--SECTIONS--
+//--HOTSPOT--
 	else if(action=='hotspot'|| action=='hotspot_on') {presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); 
     hotspotSwitch(); }
 }
