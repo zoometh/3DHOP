@@ -137,7 +137,7 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/lithic_tool_model_cf.nxz" 
+			"mesh_1" : { url: "models/RM_model_def_10-01-22_centered.nxz" 
 		}
 			// "Sphere": { url: "models/lithic_tool_roi_cf.ply" 
 			// }
@@ -152,10 +152,10 @@ function setup3dhop() {
 			type : TurntablePanTrackball,
 			trackOptions : {
 				startPhi: 0,
-				startTheta: 180,
+				startTheta: 0,
 				startDistance: 1.5,
 				minMaxPhi: [-180, 180],
-				minMaxTheta: [-90, 270],
+				minMaxTheta: [-180, 180],
 				minMaxDist: [0.2, 2]
 			}
 		}
